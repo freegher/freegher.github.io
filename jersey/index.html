@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>JerseySection</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -42,8 +42,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <h4><b>球衣特區</b></h4>
   </div>
   <div class="w3-bar-block">
-    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal">
-      <i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO
+    <a href="#section" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal">
+      <i class="fa fa-th-large fa-fw w3-margin-right"></i>JERSEY
     </a> 
     <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding">
       <i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT
@@ -51,11 +51,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding">
       <i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT
     </a>
-    <a href="#conf" onclick="arrow(this)" data-toggle="collapse" class="w3-bar-item w3-button list-group-item">
+    <!-- <a href="#conf" onclick="arrow(this)" data-toggle="collapse" class="w3-bar-item w3-button list-group-item">
       <i class="fa fa-angle-right"></i><b>Team</b>            
-    </a>
-    <div id="conf" class="collapse list-group">
-      
+    </a> -->
+    <!-- <div id="conf" class="collapse list-group">
         <a href="#east" data-toggle="collapse" class="list-group-item" onclick="arrow(this)">
           <i class="fa fa-angle-right"></i>
           <b style="color: blue;">East Conf</b>           
@@ -122,8 +121,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
             <a href="#">Washington Wizards</a>
           </div>
         </div>
-      
-      
         <a href="#west" data-toggle="collapse" class="list-group-item" onclick="arrow(this)">
           <i class="fa fa-angle-right"></i>
           <b style="color: red;">West Conf</b>            
@@ -189,9 +186,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
             <img class="logo" src="https://raw.githubusercontent.com/freegher/freegher.github.io/7dd8feff7cf512dfc2219935e9b30ef77f63c14f/jersey/logo/UTA.svg" alt="Utah Jazz">
             <a href="#">Utah Jazz</a>
           </div>
-        </div>
-            
-    </div>
+        </div>            
+    </div> -->
   </div>  
 </nav>
 
@@ -202,135 +198,84 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 <div class="w3-main" style="margin-left:300px">
 
   <!-- Header -->
-  <header id="portfolio">
+  <header id="section">
     <a href="#"><img src="https://github.com/freegher/freegher.github.io/blob/master/jersey/jordan_draft.jpg?raw=true" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
     <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
     <div class="w3-container">
-    <h1><b>My Portfolio</b></h1>
-    <div class="w3-section w3-bottombar w3-padding-16">
-      <span class="w3-margin-right">Filter:</span> 
-      <button class="w3-button w3-black">ALL</button>
-      <button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Design</button>
-      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Photos</button>
-      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Art</button>
-    </div>
+      <h1><b>Jersey Section</b></h1>
+      <div class="w3-section w3-bottombar w3-padding-16">
+        <!-- <span class="w3-margin-right">Filter:</span> 
+        <button class="w3-button w3-black">ALL</button> -->
+        <select id="team">
+          <option>Team</option>
+          <option value="ATL" style="color:rgb(225, 68, 52);background-color:rgb(196, 214, 0)">Atlanta Hawks</option>
+          <option value="BOS" style="color:rgb(207, 214, 223);background-color:rgb(0, 122, 51)">Boston Celtics</option>
+          <option value="BKN" style="color:rgb(255, 255, 255);background-color:rgb(0, 0, 0)">Brooklyn Nets</option>
+          <option value="CHA" style="color:rgb(161, 161, 164);background-color:rgb(0, 120, 140)">Charlotte Hornets</option>
+          <option value="CHI" style="color:rgb(206, 17, 65);background-color:rgb(6, 25, 34)">Chicago Bulls</option>
+          <option value="CLE" style="color:rgb(253, 187, 48);background-color:rgb(134, 0, 56)">Cleveland Cavaliers</option>
+          <option value="DAL" style="color:rgb(6, 25, 34);background-color:rgb(0, 83, 188)">Dallas Mavericks</option>
+          <option value="DEN" style="color:rgb(255, 198, 39);background-color:rgb(13, 34, 64)">Denver Nuggets</option>
+          <option value="DET" style="color:rgb(200, 16, 46);background-color:rgb(0, 45, 98)">Detroit Pistons</option>
+          <option value="GSW" style="color:rgb(255, 199, 44);background-color:rgb(29, 66, 138)">Golden State Warriors</option>
+          <option value="HOU" style="color:rgb(196, 206, 211);background-color:rgb(206, 17, 65)">Houston Rockets</option>
+          <option value="IND" style="color:rgb(253, 187, 48);background-color:rgb(0, 45, 98)">Indiana Pacers</option>
+          <option value="LAC" style="color:rgb(190, 192, 194);background-color:rgb(29, 66, 148)">LA Clippers</option>
+          <option value="LAL" style="color:rgb(85, 37, 130);background-color:rgb(253, 185, 39)">Los Angeles Lakers</option>
+          <option value="MEM" style="color:rgb(93, 118, 169);background-color:rgb(18, 23, 63)">Memphis Grizzlies</option>
+          <option value="MIA" style="color:rgb(152, 0, 46);background-color:rgb(6, 25, 34)">Miami Heat</option>
+          <option value="MIL" style="color:rgb(240, 235, 210);background-color:rgb(0, 71, 27)">Milwaukee Bucks</option>
+          <option value="MIN" style="color:rgb(158, 162, 162);background-color:rgb(12, 35, 64)">Minnesota Timberwolves</option>
+          <option value="NOP" style="color:rgb(180, 151, 90);background-color:rgb(0, 22, 65)">New Orleans Pelicans</option>
+          <option value="NYK" style="color:rgb(245, 132, 38);background-color:rgb(0, 107, 182)">New York Knicks</option>
+          <option value="OKC" style="color:rgb(239, 59, 36);background-color:rgb(0, 125, 195)">Oklahoma City Thunder</option>
+          <option value="ORL" style="color:rgb(196, 206, 211);background-color:rgb(0, 125, 197)">Orlando Magic</option>
+          <option value="PHI" style="color:rgb(237, 23, 76);background-color:rgb(0, 107, 182)">Philadelphia 76ers</option>
+          <option value="PHX" style="color:rgb(185, 89, 21);background-color:rgb(29, 17, 96)">Phoenix Suns</option>
+          <option value="POR" style="color:rgb(224, 58, 62);background-color:rgb(6, 25, 34)">Portland Trail Blazers</option>
+          <option value="SAC" style="color:rgb(99, 113, 122);background-color:rgb(91, 43, 130)">Sacramento Kings</option>
+          <option value="SAS" style="color:rgb(196, 206, 211);background-color:rgb(6, 25, 34)">San Antonio Spurs</option>
+          <option value="TOR" style="color:rgb(161, 161, 164);background-color:rgb(206, 17, 65)">Toronto Raptors</option>
+          <option value="UTA" style="color:rgb(249, 160, 27);background-color:rgb(0, 71, 27)">Utah Jazz</option>
+          <option value="WAS" style="color:rgb(0, 43, 92);background-color:rgb(227, 24, 55)">Washington Wizards</option>
+        </select>
+        <select id="year"></select>
+        <button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Design</button>
+        <button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Photos</button>
+        <button class="w3-button w3-white w3-hide-small" onclick="search()"><i class="fa fa-map-pin w3-margin-right"></i>Art</button>
+        
+      </div>    
     </div>
   </header>
-  
-  <!-- First Photo Grid-->
-  <div class="w3-row-padding">
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="/w3images/mountains.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="/w3images/lights.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container">
-      <img src="/w3images/nature.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Second Photo Grid-->
-  <div class="w3-row-padding">
-    <div class="w3-third w3-container w3-margin-bottom">
-      
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container">
-      
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-  </div>
 
   <!-- Pagination -->
-  <div class="w3-center w3-padding-32">
+  <div class="w3-center w3-padding-32" id="page" hidden>
     <div class="w3-bar">
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
-      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black" id="first" hidden onclick="goto(this)">«</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black" id="last" hidden onclick="goto(this)">»</a>
+      <input id="atP" value="1" hidden>
     </div>
   </div>
 
-  <!-- Images of Me -->
-  <div class="w3-row-padding w3-padding-16" id="about">
-    <div class="w3-col m6">
-      
-    </div>
-    <div class="w3-col m6">
-      
-    </div>
-  </div>
-
-  <div class="w3-container w3-padding-large" style="margin-bottom:32px">
-    <h4><b>About Me</b></h4>
-    <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+  <!-- About Section -->
+  <div class="w3-container w3-padding-large" style="background-color:rgb(200, 200, 200)">
+    <h4 id="about"><b>About</b></h4>
+    <p>A basketball fan from Taiwan.</p>
   </div>
   
   <!-- Contact Section -->
-  <div class="w3-container w3-padding-large w3-grey">
-    <h4 id="contact"><b>Contact Me</b></h4>
-    <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
-      <div class="w3-third w3-dark-grey">
-        <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
-        <p>email@email.com</p>
-      </div>
-      <div class="w3-third w3-teal">
-        <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
-        <p>Chicago, US</p>
-      </div>
-      <div class="w3-third w3-dark-grey">
-        <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
-        <p>512312311</p>
-      </div>
+  <div class="w3-container w3-padding-large" style="background-color: rgb(170, 170, 170)">
+    <h4 id="contact"><b>Contact</b></h4>
+    <div class="w3-center">
+      <a href="https://reurl.cc/E7EyAK" target="_blank">
+        <p><i class="fa fa-comment w3-xxlarge w3-text-light-grey"></i></p>
+        <p>github issues</p>
+      </a>      
     </div>
-    <hr class="w3-opacity">
-    <form action="/action_page.php" target="_blank">
-      <div class="w3-section">
-        <label>Name</label>
-        <input class="w3-input w3-border" type="text" name="Name" required>
-      </div>
-      <div class="w3-section">
-        <label>Email</label>
-        <input class="w3-input w3-border" type="text" name="Email" required>
-      </div>
-      <div class="w3-section">
-        <label>Message</label>
-        <input class="w3-input w3-border" type="text" name="Message" required>
-      </div>
-      <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
-    </form>
   </div>
 
   <!-- Footer -->
-  <footer class="w3-container w3-padding-32 w3-dark-grey">
+  <footer class="w3-container w3-padding-32" style="background-color:rgb(130, 130, 130)">
   <div class="w3-row-padding">
     <div class="w3-third">
       <h3>FOOTER</h3>
@@ -372,26 +317,216 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
 <!-- End page content -->
 </div>
-
-<script>
-// Script to open and close sidebar
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
-
-function arrow(obj) {
-  $('.fa', obj).toggleClass('fa-angle-right').toggleClass('fa-angle-down')    
-}
-</script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+<script>
+  //var x;
+  $.getJSON("https://api.ipify.org?format=json",
+    function(data){
+      const x=String(data.ip);
+    }
+  )
+
+  $(document).ready(function() 
+  {
+    $("year").empty();
+    const select = document.getElementById("year");
+    const thisYear=new Date().getFullYear;
+    for(let i=1946;i<=thisYear;i++)
+    {
+      let option=document.createElement("option");
+      option.text=i;
+      option.value=i;
+      select.add(option);
+    }
+    $("#year").prepend("<option value='0'>Year</option>");
+  });
+
+  // Script to open and close sidebar
+  function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+  }
+   
+  function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+  }
+  
+  function arrow(obj) {
+    $('.fa', obj).toggleClass('fa-angle-right').toggleClass('fa-angle-down')    
+  }//
+  
+  function search()
+  {
+    $(".row").remove();
+    $(".page").remove();
+
+    let Param = 
+    {
+      "name" : "",
+      "team": "",
+      "year": "",
+      "brand": "",
+      "type": "AllStar",
+      "x": x.replace(".","")   
+    };
+
+    $.ajax({
+      url: "https://script.google.com/macros/s/AKfycbySD2aApp6wdxVwFs6qRNHXzg3YjciMgZpJp4aq309dkiQyXLm7/exec",
+      type: "POST",
+      async: false,
+      dataType: "json",
+      crossDomain: true,
+      data: Param,
+      contentType: "application/json; charset=utf-8",
+      success: function(data) 
+      {
+        // handle your successful response here
+        alert("xx");
+        show(data);
+      },
+      error: function (result, status) 
+      {
+        if (status == 'error') {
+          alert(status);
+        }
+      }
+    });
+  }
+
+  function show(data)
+  {
+    const count=data.length;
+    let z=0;
+    var no;
+
+    for(let i=0;i<count;i++){
+      //row
+      if(i%3==0){
+        z++;
+        $("<div class='w3-row-padding row' id='grid"+z+"' hidden>").insertBefore("#page");
+      }
+      let third = document.createElement("div");
+      third.setAttribute("class","w3-third w3-container w3-margin-bottom");
+      let pic = document.createElement("img");
+      pic.setAttribute("style","width:100%");
+      pic.setAttribute("class","w3-hover-opacity");
+      pic.setAttribute("src",data[i].link);
+      let container = document.createElement("div");
+      container.setAttribute("class","w3-container w3-white");
+      let c1 = document.createElement("p"),
+        c2 = document.createElement("p");
+      c1.innerHTML = "<b>"+data[i].name+"</b>";
+      c2.innerHTML = data[i].team+","+data[i].brand+","+data[i].type;
+      container.appendChild(c1);
+      container.appendChild(c2);
+      third.appendChild(pic);
+      third.appendChild(container);      
+      $("#grid"+z).append(third);
+
+      //page
+      if(i%6==0){
+        no=i/6+1;
+        if(no<=4){
+          $("<a href='#' class='w3-bar-item w3-button w3-hover-black page' id='pg"+no
+          +"' onclick='goto(this)'>"+no+"</a>").insertBefore("#last");                    
+        }
+        else{
+          $("<a href='#' class='w3-bar-item w3-button w3-hover-black page' id='pg"+no
+          +"' hidden onclick='goto(this)'>"+no+"</a>").insertBefore("#last");
+        }
+        if(no==1 || no==4){
+          $("#pg"+no).attr('name',no);
+        }
+      }
+    }
+
+    //page1
+    if(count>0)
+    {
+      $("#page").removeAttr('hidden');
+      $("#atP").val(1);
+      $("#pg1").removeClass("w3-hover-black");
+      $("#pg1").addClass("w3-black");
+    }
+    if(no>4){
+      $("#first").removeAttr('hidden');
+      $("#last").removeAttr('hidden');
+    }
+  }
+
+  function goto(a)
+  {
+    const grids=$(".row").length;
+    let total;
+    let pageGO;
+    if(grids%2>0){
+      total=(grids+1)/2;
+    }
+    else{
+      total=grids/2;
+    }
+    switch(a.id){
+      case "first":
+        pageGO=1;
+        break;
+      case "last":
+        pageGO=total;
+        break;
+      default:
+        pageGO=parseInt(a.innerHTML);
+        break;
+    }
+    
+    //show grids
+    let gr1=pageGO*2-1;
+    let gr2=pageGO*2;
+    $("#grid"+gr1).removeAttr('hidden');
+    if(gr2<=grids){
+      $("#grid"+gr2).removeAttr('hidden');
+    }
+    //hide grids
+    const at=$("#atP").val();
+    gr1=at*2-1;
+    gr2=at*2;
+    $("#grid"+gr1).attr('hidden','');
+    if(gr2<=grids){
+      $("#grid"+gr2).attr('hidden','');
+    }
+    //set page
+    $("#atP").val(pageGO);
+    $("#pg"+pageGO).addClass("w3-black");
+    $("#pg"+pageGO).removeClass("w3-hover-black");
+    $("#pg"+at).addClass("w3-hover-black");
+    $("#pg"+at).removeClass("w3-black");
+    if(total>4){
+      //next 顯示下一頁
+      if(a.name==4 && pageGO<total){
+        let btn4=pageGO+1, btn1=pageGO-3, btn2=pageGO-2;
+        $("#pg"+pageGO).removeAttr('name');
+        $("#pg"+btn4).removeAttr('hidden');
+        $("#pg"+btn4).attr('name',4);
+        $("#pg"+btn1).attr('hidden','');
+        $("#pg"+btn1).removeAttr('name');
+        $("#pg"+btn2).attr('name',1);
+      }
+      //previous 顯示上一頁
+      if(a.name==1 && pageGO>1){
+        let btn1=pageGO-1, btn4=pageGO+3, btn3=pageGO+2;
+        $("#pg"+pageGO).removeAttr('name');
+        $("#pg"+btn1).removeAttr('hidden');
+        $("#pg"+btn1).attr('name',1);
+        $("#pg"+btn4).attr('hidden','');
+        $("#pg"+btn4).removeAttr('name');
+        $("#pg"+btn3).attr('name',4);
+      }
+    }    
+  }
+  </script>
 
 </body>
 </html>
