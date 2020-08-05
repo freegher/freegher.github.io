@@ -377,15 +377,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
     $.ajax({
       url: "https://script.google.com/macros/s/AKfycbySD2aApp6wdxVwFs6qRNHXzg3YjciMgZpJp4aq309dkiQyXLm7/exec",
-      type: "POST",      
+      type: "POST",
+      async: false,
       dataType: "json",
       crossDomain: true,
       data: Param,
       contentType: "application/x-www-form-urlencoded",
       success: function(data) 
       {
-        // handle your successful response here
-        alert("xx");
         show(data);
       },
       error: function (result, status) 
@@ -400,6 +399,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   function show(data)
   {
     const count=data.length;
+    const link="http://drive.google.com/uc?export=view&id=";
     let z=0;
     var no;
 
@@ -407,14 +407,19 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       //row
       if(i%3==0){
         z++;
-        $("<div class='w3-row-padding row' id='grid"+z+"' hidden>").insertBefore("#page");
+        if(i<2){
+          $("<div class='w3-row-padding row' id='grid"+z+"'>").insertBefore("#page");
+        }
+        else{
+          $("<div class='w3-row-padding row' id='grid"+z+"' hidden>").insertBefore("#page");
+        }        
       }
       let third = document.createElement("div");
       third.setAttribute("class","w3-third w3-container w3-margin-bottom");
       let pic = document.createElement("img");
       pic.setAttribute("style","width:100%");
       pic.setAttribute("class","w3-hover-opacity");
-      pic.setAttribute("src",data[i].link);
+      pic.setAttribute("src",link+data[i].link);
       let container = document.createElement("div");
       container.setAttribute("class","w3-container w3-white");
       let c1 = document.createElement("p"),
