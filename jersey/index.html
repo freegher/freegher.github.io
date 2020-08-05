@@ -372,7 +372,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       "year": "",
       "brand": "",
       "type": "AllStar",
-      "x": x.replace(".","")   
+      "x": x.replaceAll(".","")   
     };
 
     $.ajax({
@@ -381,7 +381,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       dataType: "json",
       crossDomain: true,
       data: Param,
-      contentType: "application/json; charset=utf-8",
+      contentType: "application/x-www-form-urlencoded",
       success: function(data) 
       {
         // handle your successful response here
